@@ -1,0 +1,26 @@
+version: "3"
+services:
+  golang:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - pgsql
+    # volumes:
+    # - .:/app
+  pgsql:
+    image: postgres
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p@ssw0rd
+      POSTGRES_DB: test
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data

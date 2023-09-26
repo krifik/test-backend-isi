@@ -1,0 +1,85 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "TEST ISI",
+    "dateExported": "2023-09-26T13:36:48.527Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d7ca19c9-6d65-40df-bd23-1a2edf317b0c",
+            "colId": "b15eb8b2-6083-4be9-8280-d4c715ad31b8",
+            "containerId": "",
+            "name": "SALDO",
+            "url": "http://localhost:3000/api/saldo/1028102810280812802808",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-09-26T12:52:36.360Z",
+            "modified": "2023-09-26T13:14:30.930Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3c1dd0b3-bb11-4062-a6dd-e0a44d754f5d",
+            "colId": "b15eb8b2-6083-4be9-8280-d4c715ad31b8",
+            "containerId": "",
+            "name": "MUTASI",
+            "url": "http://localhost:3000/api/mutasi/1028102810280812802808",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-09-26T12:52:54.354Z",
+            "modified": "2023-09-26T12:52:54.354Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"no_rekening\": \"1028102810280812802808\",\n  \"nominal\": 1000\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8f4a7dff-185e-4818-bde2-9a28631a30bb",
+            "colId": "b15eb8b2-6083-4be9-8280-d4c715ad31b8",
+            "containerId": "",
+            "name": "TABUNG",
+            "url": "http://localhost:3000/api/tabung",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-09-26T12:53:17.040Z",
+            "modified": "2023-09-26T12:53:17.040Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"no_rekening\": \"1028102810280812802808\",\n  \"nominal\": 1000\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "923c572f-e6e8-4095-b860-e26de40b5082",
+            "colId": "b15eb8b2-6083-4be9-8280-d4c715ad31b8",
+            "containerId": "",
+            "name": "TARIK",
+            "url": "http://localhost:3000/api/tarik",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-09-26T12:53:41.955Z",
+            "modified": "2023-09-26T12:53:54.819Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"no_rekening\": \"1028102810280812802808\",\n  \"nominal\": 1000\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://0.0.0.0:3000"
+        }
+    }
+}

@@ -7,7 +7,7 @@ type MutationRequest struct {
 }
 
 type MutationResponses struct {
-	MutationDate    time.Time `json:"date"`
-	TransactionCode string    `json:"transaction_code"`
-	Amount          int64     `json:"amount"`
+	MutationDate    time.Time `json:"waktu"`
+	TransactionCode string    `json:"kode_transaksi"`
+	Amount          int64     `json:"nominal"`
 }

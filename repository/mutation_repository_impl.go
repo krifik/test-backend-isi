@@ -1,7 +1,6 @@
 package repository
 
 import (
-	"fmt"
 	"github/krifik/test-isi/config"
 	"github/krifik/test-isi/entity"
 	"github/krifik/test-isi/model"
@@ -25,11 +24,13 @@ func (repository *MutationRepositoryImpl) FindMutations(req model.MutationReques
 	accountRepository := &AccountRepositoryImpl{
 		DB: repository.DB,
 	}
-	fmt.Println("test", req)
 	accountEntity := accountRepository.FindAccount(model.AccountRequest{
 		AccountNumber: req.AccountNumber,
 	})
 	var mutation *[]entity.Mutation
+	if accountEntity == nil {
+		return nil
+	}
 	if tx := repository.DB.WithContext(ctx).Find(&mutation, "account_id = ?", accountEntity.ID).Error; tx != nil {
 		return nil
 	} else {
